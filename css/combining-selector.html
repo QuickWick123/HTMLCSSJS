@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Combining Selectors</title>
+<style>
+    /* Every P that has class big */
+    p.big {
+        font-size: 50px;
+    }
+
+    /* Descendant Selector 
+    Every P that is a child of article at any level*/
+    /* <article><p></p></article> is affected */
+    /* <article> <div><p></p></div></article> is unaffected*/
+    article p {
+        color: yellow;
+    }
+
+    /*Child Selector
+    Every P that is a direct child of article*/
+    /* <article><p></p></article> is affected */
+    /* <article> <div><p></p></div></article> is unaffected bcuz its direct child of div not direct child of article */
+    article > p {
+        color: Green;
+    }
+
+    /* Adjacent sibling combinator
+    Paragraphs that come immediately after any image */
+    img + p {
+    font-weight: bold;
+    }
+
+    /* General sibling combinator
+    Paragraphs that are siblings of and
+    subsequent to any span */
+    p ~ span {
+    color: red;
+    }
+
+    /* Every p that is inside (at any level) an alement with class="colored" */
+    .colored p{
+        color:rgb(170, 87, 19);
+        font-size: 40px;
+    }
+
+        /* Every p that is inside (at any level) an alement with class="colored" */
+    .color {
+        color:rgb(170, 19, 100);
+        font-size: 40px;
+    }
+
+    .highlight {
+        background-color:rgb(19, 170, 107);
+    }
+
+    /* Has bot highlight and color as classes selected, italicize additionally */
+    .highlight.color {
+         font-style: italic;
+    }
+
+    div > article > p {
+        background-color:blueviolet
+    }
+</style>
+</head>
+
+<body>
+    <p>Hello</p>
+    <p class="big"> I am a giant</p>
+    <article><div><p> I am not a direct child of article but am a child of it</p></div></article>
+    <article><p> I am a direct child of article</p></article>
+    <p class="colored">I have two classes - Colored and Big</p>
+    <p class="highlight color">I have two classes - Colored and Big</p>
+    <div><p>hrrrrm</p></div>
+    <div><article><p>Descendant of descendnat of descendant - I also take info from article > p class</p></article></div>
+</body>
+</html>
