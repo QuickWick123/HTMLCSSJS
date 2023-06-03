@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inheritance in CSS</title>
+    <style>
+        body {
+            color: red;
+            text-align: center;
+            font-family: Helvetica;
+        }
+        p {
+            color: blue;
+        }
+        h1 {
+            /* Ignores specificity and overrides. Normal color would be red. */
+            color:green !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cascade of CSS Example</h1>
+    <h2>Subheading 1</h2>
+    <p>Inheritance allows us to write more global styles
+        on parent elements and then "fine-tune" the styles
+        for some of the child elements as needed. Such
+        approach makes writing CSS very efficient.</p>
+    <h2 style="color: green;"> Subheading 2 </h2>
+    <p>Lorem ipsum dolor sit amet. Aut tenetur dolor ea eligendi quibusdam rem quisquam dolores est laudantium quia eum dignissimos saepe in galisum quidem est quidem velit. Ea deserunt molestiae qui voluptatem dolore et dolores sequi! Qui alias suscipit nam amet eius qui quisquam odit est nemo mollitia sit dolores assumenda. Et magnam blanditiis aut laborum voluptatem ad libero tempore ea amet veniam et quidem sapiente et autem nihil. Aut repellat sint et ducimus iusto in sint porro et quas facere non praesentium delectus eum internos dolorem.</p>
+</body>
+</html>

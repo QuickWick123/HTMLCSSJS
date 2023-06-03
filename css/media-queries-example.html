@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Media Queries</title>
+    <style>
+        /* @media (max-width: 800px) {}
+        @media (min-width: 800px) {}
+        You can also do height
+        @media (orientation: portrait) {}
+        @media screen {}
+        @media print {} 
+
+        -Logical Operators-
+        @media (min-width: 768px) and (max-width: 991px) {}
+        comma is equivalent to OR
+        @media (max-width: 768px) , (min-width: 991px) {}
+        */
+
+        /* Example
+        p text is set to blue
+        Any media with width 1200px and up has yellow colored text
+        Any media in between 992px and 1199px has green colored text */
+        p { 
+            color: blue;
+        }
+        @media (min-width: 1200px) {
+            div {
+                color: yellow;
+            }
+        }
+        @media (min-width: 992px) and (max-width: 1199px) {
+            p {
+                color: green;
+            }
+            #p1 {
+                width: 70%;
+            }
+        }
+            
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
